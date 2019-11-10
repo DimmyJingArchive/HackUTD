@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { form, TextField } from '@material-ui/core';
+import { form, TextField, Typography, Slider} from '@material-ui/core';
 
 class Main extends React.Component {
   state = {
@@ -9,14 +9,22 @@ class Main extends React.Component {
   }
 
   render() {
-    if (this.state.pressed)
+    if (this.state.pressed) 
       return (
+        
         <div className="App" style={{margin: 50}}>
           <form>
-            <TextField id="a" label="asdf" autoComplete="abc cde def"/>
+          
+          <TextField
+          id="standard-helperText"
+          label="Loan Id"
+          helperText="Alpha-Numeric"
+          margin="normal"
+        />
           </form>
         </div>
       );
+  
     else
       return (
         <div className="App">
